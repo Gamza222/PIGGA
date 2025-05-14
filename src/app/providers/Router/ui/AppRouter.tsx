@@ -1,6 +1,7 @@
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
-import React, { Suspense, useEffect } from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import React, { Suspense, useEffect } from "react";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { PageLoader } from "features/PageLoader";
 // import { Loader } from 'widgets/Loader';
 // import { PageLoader } from 'widgets/PageLoader';
 
@@ -14,7 +15,7 @@ const AppRouter = () => {
         return `${path}` == url;
       })
     ) {
-      navigate('/');
+      navigate("/");
     }
   }, [url]);
 
@@ -28,10 +29,10 @@ const AppRouter = () => {
               fallback={
                 // <PageLoader />
                 // <Loader className='main-loader' />
-                <p>Loading...</p>
+                <PageLoader />
               }
             >
-              <div className='page-wrapper'>{element}</div>
+              <div className="page-wrapper">{element}</div>
             </Suspense>
           }
           path={path}

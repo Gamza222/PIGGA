@@ -1,6 +1,7 @@
-import React, { type ReactNode, type ErrorInfo, Suspense } from 'react';
-import { withTranslation } from 'react-i18next';
-import PageError from 'widgets/PageError/ui/PageError';
+import { PageLoader } from "features/PageLoader";
+import React, { type ReactNode, type ErrorInfo, Suspense } from "react";
+import { withTranslation } from "react-i18next";
+import PageError from "widgets/PageError/ui/PageError";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -35,7 +36,7 @@ class ErrorBoundary extends React.Component<
     if (hasError) {
       // You can render any custom fallback UI
       return (
-        <Suspense fallback=''>
+        <Suspense fallback={<PageLoader />}>
           <PageError />
         </Suspense>
       );

@@ -13,6 +13,7 @@ import { DimensionsContext } from "./providers/DimensionProvider/DimensionsProvi
 import { useSelector } from "react-redux";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { LandingPage } from "pages/LandingPage";
 
 interface AppProps {
   className?: string;
@@ -46,7 +47,7 @@ const App = ({ className }: AppProps) => {
         <div className={classNames("app-content", { ...appContentMods }, [])}>
           <Navbar />
           <div className="content-page">
-            <AppRouter />
+            <LandingPage />
           </div>
         </div>
       </div>

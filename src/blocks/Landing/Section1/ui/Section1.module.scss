@@ -2,7 +2,10 @@
 .Section1 {
   position: relative;
   @include Section;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
   .btns {
@@ -16,6 +19,7 @@
   }
 
   .Button {
+    text-align: center;
     background: black;
     padding: 10px 30px;
     font-size: 50px;
@@ -37,6 +41,7 @@
     justify-content: center;
     margin-top: 200px;
     flex-grow: 1;
+    padding-bottom: 100px;
   }
   .pigga1 {
     height: 400px;
@@ -52,6 +57,7 @@
     height: 160%;
     min-height: 900px;
     animation: big 3s infinite linear;
+    max-height: 1100px;
   }
 
   .pigga3 {
@@ -61,8 +67,38 @@
     transform: scale(-1, 1);
     height: 160%;
     min-height: 900px;
+    max-height: 1100px;
 
     animation: big2 3s infinite linear;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    > a {
+      border-radius: 50%;
+      background: black;
+      border: 5px solid orange;
+      display: flex;
+      padding: 40px;
+
+      svg {
+        fill: orange;
+        transition: 0.2s linear;
+        font-size: 120px;
+      }
+
+      &:hover {
+        border-color: black;
+        background: orange;
+
+        svg {
+          fill: black;
+        }
+      }
+    }
   }
 
   &__content {
@@ -73,6 +109,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    flex-grow: 1;
 
     &__piga {
       margin-top: -120px;
@@ -80,7 +117,6 @@
       animation-name: Piga;
       font-weight: 900;
       position: relative;
-      animation: spin-3d 5s infinite linear;
       z-index: 100;
       > p:nth-child(1) {
         position: relative;
@@ -89,6 +125,8 @@
         text-shadow: -7px -7px 0 orange, 0px -7px 0 orange, 7px -7px 0 orange,
           -7px 0px 0 orange, 7px 0px 0 orange, -7px 7px 0 orange,
           0px 7px 0 orange, 7px 7px 0 orange;
+        animation: spin-3d 5s infinite linear;
+
         > span {
           visibility: hidden;
         }
@@ -108,7 +146,7 @@
 
 .Bg {
   position: absolute;
-  width: 100%;
+  width: auto;
   min-width: 1500px;
   top: 0;
   filter: brightness(0.5);
@@ -124,6 +162,7 @@
   .pigga2,
   .pigga3 {
     min-height: 500px !important;
+    max-height: 800px !important;
   }
 
   .pigga2 {
@@ -135,6 +174,15 @@
   }
   .Button {
     font-size: 38px !important;
+  }
+
+  .links {
+    > a {
+      padding: 30px !important;
+      > svg {
+        font-size: 90px !important;
+      }
+    }
   }
 
   .Section1__content__piga {
@@ -153,6 +201,15 @@
   .pigga2,
   .pigga3 {
     min-height: 500px !important;
+    max-height: 620px !important;
+  }
+  .links {
+    > a {
+      padding: 20px !important;
+      > svg {
+        font-size: 70px !important;
+      }
+    }
   }
 
   .pigga2 {
@@ -198,12 +255,23 @@
   }
 
   .pigga2 {
-    left: -5% !important;
-    display: none;
+    left: 50% !important;
+    transform: scale(1) translateX(-50%) !important;
+    animation: bigSm 3s linear infinite forwards !important;
+  }
+
+  .links {
+    > a {
+      padding: 15px !important;
+      > svg {
+        font-size: 50px !important;
+      }
+    }
   }
 
   .pigga3 {
     right: 0% !important;
+    display: none;
   }
 
   .Button {
@@ -218,6 +286,15 @@
 @media screen and (max-width: 750px) {
   .Section1__content__piga {
     font-size: 70px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .Section1__content__piga {
+    font-size: 50px;
+  }
+
+  .piga_text {
+    margin-top: 160px;
   }
 }
 @keyframes Piga {

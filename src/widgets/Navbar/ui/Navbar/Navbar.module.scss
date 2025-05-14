@@ -1,0 +1,34 @@
+.Navbar {
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.Navbar__track {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll-right 30s linear infinite;
+  padding: 8px;
+
+  > span {
+    padding: 35px;
+    color: orange;
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -50,7 +50,7 @@ const Section1 = ({ className }: Section1Props) => {
             variants={NavbarAnimationVarinats}
             initial={"start"}
             animate={loadingLogo ? "start" : "end"}
-            href=""
+            href="https://x.com/elonmusk"
             target="_blank"
             className={cls.Button}
           >
@@ -69,7 +69,7 @@ const Section1 = ({ className }: Section1Props) => {
             variants={NavbarAnimationVarinats}
             initial={"start"}
             animate={loadingLogo ? "start" : "end"}
-            href=""
+            href="https://x.com/elonmusk"
             target="_blank"
             className={cls.Button}
           >
@@ -88,7 +88,7 @@ const Section1 = ({ className }: Section1Props) => {
                 variants={animavar2}
                 initial={"start"}
                 animate={loadingLogo ? "start" : "end"}
-                href="#dkdk"
+                href="https://x.com/AbstractPigga"
                 target="_blank"
               >
                 <FaXTwitter />

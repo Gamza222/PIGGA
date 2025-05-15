@@ -69,7 +69,7 @@ const Section1 = ({ className }: Section1Props) => {
             variants={NavbarAnimationVarinats}
             initial={"start"}
             animate={loadingLogo ? "start" : "end"}
-            href="https://x.com/elonmusk"
+            href="https://dexscreener.com/abstract/0xf2b8deeb61a87306a670b771a7aeddab4b0bc934"
             target="_blank"
             className={cls.Button}
           >
